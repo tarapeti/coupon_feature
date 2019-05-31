@@ -9,9 +9,11 @@ public interface CouponDao {
 
     List<Coupon> findAll() throws SQLException;
 
+    List<Coupon> findByUserId(int userId) throws SQLException;
+
     Coupon findById(int id) throws SQLException;
 
-    Coupon add(String name, int percentage) throws SQLException;
+    Coupon add(String name, int percentage, int userId) throws SQLException;
 
     void add(int couponId, int... shopIds) throws SQLException;
 }
