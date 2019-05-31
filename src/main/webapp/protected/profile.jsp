@@ -14,6 +14,28 @@
     <li><a href="shops">Shops</a></li>
     <li><a href="coupons">Coupons</a></li>
 </ul>
+
+<h2>My coupons</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>%</th>
+        <th>userId</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach var="record" items="${coupons}">
+        <tr>
+            <td>${record.id}</td>
+            <td>${record.name}</td>
+            <td>${record.percentage}</td>
+            <td>${record.userId}</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 <jsp:include page="../snippets/logout.jsp"/>
 </body>
 </html>
