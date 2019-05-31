@@ -13,6 +13,18 @@ public final class Coupon extends AbstractModel {
         this.userId = userId;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getPercentage() {
+        return percentage;
+    }
+
+    public int getUserId() {
+        return userId;
+    }
+
     @Override
     public boolean equals(Object o) {
         return super.equals(o);
